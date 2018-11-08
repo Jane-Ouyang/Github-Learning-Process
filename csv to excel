@@ -1,12 +1,12 @@
 import csv
 import xlwt
-import pandas as pd
+import pandas as pd #读取csv的库
 
 def csv_to_xlsx(csvfile):
-  with open(csvfile, encoding='utf-8') as fc:
+  with open(csvfile, encoding='utf-8') as fc: #自动调用close()
     r_csv = csv.reader(fc)
     workbook = xlwt.Workbook()
-    sheet = workbook.add_sheet('sheet1')  # 创建一个sheet表格
+    sheet = workbook.add_sheet('sheet1')  # 创建一个Excel表格
     i = 0   
     j = 0        
     for line in r_csv:
