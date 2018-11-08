@@ -1,0 +1,14 @@
+import xlwt
+wbk = Workbook(encoding='utf-8') 
+
+
+def set_style(name,height,bold=False):
+    style = xlwt.XFStyle()  # 初始化样式
+
+    font = xlwt.Font()  # 为样式创建字体
+    font.name = name
+    font.bold = bold
+    font.color_index = 4
+    font.height = height
+    
+  return style
